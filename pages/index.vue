@@ -15,6 +15,7 @@
                     <HomeCountdown />
                     <HomeGallery />
                     <HomeComments />
+                    <Audio />
                 </main>
 
             </div>
@@ -29,18 +30,19 @@
 <script setup lang="ts">
 useHead({
     title: "Nuxt 3 Minimal Starter",
-    meta: [{ name: "description", content: "Nuxt 3 Minimal Starter" }],
-    link: [{ rel: "stylesheet", href: "https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" }],
+    meta: [{ name: "description", content: "Nuxt 3 Minimal Starter" }]
 });
 
 const isOpenInvitation = ref(false);
-
 const openInvitation = () => {
     isOpenInvitation.value = true;
 };
 
 </script>
 
+<style scoped>
+@import url('../assets/css/animate.css');
+</style>
 
 <style scoped>
 .slide-up-enter-active,
@@ -56,5 +58,10 @@ const openInvitation = () => {
 .slide-up-leave-to {
     opacity: 0;
     transform: translateY(-60px);
+}
+
+
+html {
+    scroll-behavior: smooth;
 }
 </style>

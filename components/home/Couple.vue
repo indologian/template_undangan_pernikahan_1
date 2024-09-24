@@ -72,8 +72,7 @@ export default defineComponent({
         onMounted(() => {
             if (bride.value && groom.value) {
                 observer = new IntersectionObserver(observerCallback, {
-                    threshold: 0.1, // Trigger when 10% of the element is visible
-                    rootMargin: '0px 0px -10% 0px' // Trigger slightly before the element is fully in view
+                    rootMargin: '0px 0px -10% 0px' 
                 });
                 observer.observe(bride.value);
                 observer.observe(groom.value);
@@ -109,11 +108,6 @@ export default defineComponent({
     opacity: 1;
     visibility: visible;
 }
-
-html {
-    scroll-behavior: smooth;
-}
-
 section {
     contain: paint;
 }

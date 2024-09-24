@@ -48,8 +48,6 @@ const startCarousel = () => {
     setInterval(showNextItem, 3000);
 };
 
-
-
 onMounted(() => {
     if (props.isOpenInvitation) {
         startCarousel();

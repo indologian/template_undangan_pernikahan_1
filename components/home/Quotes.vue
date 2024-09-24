@@ -1,6 +1,6 @@
 <template>
     <section id="quotes" ref="quotes" class="flex w-full  justify-center pt-12 bg-pink-50">
-        <div class="flex flex-col justify-center bg-pink-50 shadow-xl border-2 border-pink-600 text-center py-4 px-4 w-[80%] rounded-lg h-56"
+        <div class="wrapper flex flex-col justify-center bg-pink-50 shadow-xl border-2 border-pink-600 text-center py-4 px-4 w-[80%] rounded-lg h-56"
             :class=" {
                 'animate__animated animate__fadeInUp animate__slow visible': quotesVisible
             } ">
@@ -51,3 +51,17 @@ onUnmounted(() => {
     }
 });
 </script>
+
+<style scoped>
+.wrapper {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+
+}
+
+.wrapper.visible {
+    opacity: 1;
+    visibility: visible;
+}
+</style>
