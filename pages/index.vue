@@ -60,8 +60,8 @@ const openInvitation = () => {
     transform: translateY(-60px);
 }
 
-
+/* 
 html {
-    scroll-behavior: smooth;
-}
+    scroll-behavior: smooth !important;
+} */
 </style>

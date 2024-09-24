@@ -11,4 +11,9 @@ export default defineNuxtConfig({
     },
   },
   modules: ["@nuxt/icon"],
+  router: {
+    options: {
+      scrollBehaviorType : "smooth",
+    }
+  }
 });

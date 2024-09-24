@@ -1,5 +1,5 @@
 <template>
-    <section id="comments" class="pt-12 pb-32">
+    <section id="comments" class="pt-6 pb-32">
         <h2 class="font-manrope text-5xl text-center font-bold text-gray-900 pb-10">Ucapan</h2>
         <div class="max-w-2xl mx-auto w-[80%] p-6 bg-pink-200 rounded-lg shadow-lg">
 
