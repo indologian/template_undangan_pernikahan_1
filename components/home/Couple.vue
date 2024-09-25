@@ -10,7 +10,7 @@
                     :class=" { 'animate__animated animate__fadeInLeft animate__slow visible': brideVisible } ">
                     <div class="relative mb-6">
                         <img class="w-40 h-40 rounded-full mx-auto object-cover border-4 border-solid border-pink-200"
-                            src="https://pagedone.io/asset/uploads/1696238374.png" alt="Bride image" />
+                            src="~/assets/images/couple/couple_1.jpeg" alt="Bride image" />
                     </div>
                     <h4 class="text-4xl md:text-6xl font-serif text-pink-600 mb-8 capitalize text-center">
                         Oktaviyanti
@@ -29,7 +29,7 @@
                     :class=" { 'animate__animated animate__fadeInRight animate__slow visible': groomVisible } ">
                     <div class="relative mb-6">
                         <img class="w-40 h-40 rounded-full mx-auto object-cover border-4 border-solid border-pink-200"
-                            src="https://pagedone.io/asset/uploads/1696238374.png" alt="Groom image" />
+                            src="~/assets/images/couple/couple_2.jpeg" alt="Groom image" />
                     </div>
                     <h4 class="text-4xl md:text-6xl font-serif capitalize text-pink-600 mb-8 text-center">
                         beni mustiko aji
@@ -109,6 +109,7 @@ export default defineComponent({
     opacity: 1;
     visibility: visible;
 }
+
 section {
     contain: paint;
 }

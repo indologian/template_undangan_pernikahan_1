@@ -12,6 +12,7 @@
                     <HomeQuotes />
                     <HomeCouple />
                     <HomeStory />
+                    <HomeMap />
                     <HomeCountdown />
                     <HomeGallery />
                     <HomeComments />
@@ -59,9 +60,4 @@ const openInvitation = () => {
     opacity: 0;
     transform: translateY(-60px);
 }
-
-/* 
-html {
-    scroll-behavior: smooth !important;
-} */
 </style>

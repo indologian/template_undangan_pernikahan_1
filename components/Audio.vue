@@ -1,10 +1,10 @@
 <template>
     <div class="fixed bottom-[7rem] right-4 z-30">
-        <button v-if="!isPlaying" ref="playBtn" @click="startAudio"
+        <button v-if="!isPlaying" ref="playBtn" @click=" startAudio "
             class="bg-pink-500 hover:bg-pink-600 transition-colors text-white font-bold py-2 px-3 rounded-full flex items-center justify-center">
             <Icon name="lucide:audio-lines" class="text-lg" />
         </button>
-        <button v-else @click="stopAudio"
+        <button v-else @click=" stopAudio "
             class="bg-pink-500 hover:bg-pink-600 text-white font-bold py-2 px-3 rounded-full flex justify-center items-center">
             <Icon name="ph:stop-fill" class="text-lg" />
         </button>
@@ -58,7 +58,7 @@ const stopAudio = () => {
 }
 
 button {
-    width: 50px; /* Set width for a more circular button */
-    height: 50px; /* Set height for a more circular button */
+    width: 50px;
+    height: 50px;
 }
 </style>

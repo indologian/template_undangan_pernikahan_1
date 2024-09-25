@@ -4,23 +4,26 @@
             <h1 class="text-center pb-10 font-bold text-4xl text-gray-800">
                 Our Story
             </h1>
-            <div class="flex overflow-x-scroll hide-scroll-bar px-4 md:px-6">
+            <div class="flex overflow-x-scroll hide-scroll-bar px-6 md:px-6">
                 <div class="flex flex-nowrap space-x-12">
-                    <HomePartialsStoryItem />
-                    <HomePartialsStoryItem />
-                    <HomePartialsStoryItem />
-                    <HomePartialsStoryItem />
-                    <HomePartialsStoryItem />
-                    <HomePartialsStoryItem />
-                    <HomePartialsStoryItem />
-                    <HomePartialsStoryItem />
-                    <HomePartialsStoryItem />
+                    <HomePartialsStoryItem :image=" image_story_1 " label="Story 1" />
+                    <HomePartialsStoryItem :image=" image_story_2 " label="Story 2" />
+                    <HomePartialsStoryItem :image=" image_story_3 " label="Story 3" />
+                    <HomePartialsStoryItem :image=" image_story_4 " label="Story 4" />
                 </div>
             </div>
         </div>
     </section>
 </template>
 
+
+
+<script setup lang="ts">
+import image_story_1 from '~/assets/images/story/story_1.jpeg';
+import image_story_2 from '~/assets/images/story/story_2.jpeg';
+import image_story_3 from '~/assets/images/story/story_3.jpeg';
+import image_story_4 from '~/assets/images/story/story_4.jpeg';
+</script>
 <style secoped>
 .hide-scroll-bar {
     -ms-overflow-style: none;
