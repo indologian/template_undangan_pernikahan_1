@@ -1,19 +1,22 @@
 <template>
-    <div class="px-4 bg-pink-100 py-12">
-        <div class="px-4 py-6 bg-pink-300 rounded-lg shadow-lg flex flex-col overflow-hidden map-container">
-            <LMap style="height: 350px" :zoom=" 15 " :center=" [lat, lng] " @click=" handleMapClick ">
-                <LTileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-                    attribution="&copy; <a href=&quot;https://www.openstreetmap.org/&quot;>OpenStreetMap</a> contributors"
-                    layer-type="base" name="OpenStreetMap" />
+    <div class="w-full px-6 flex items-center justify-center bg-pink-100">
+        <div class="w-full max-w-7xl">
+            <HomePartialsSectionTitle le label="Lokasi" />
+            <div class="px-4 py-6 bg-pink-300 rounded-lg shadow-lg flex flex-col overflow-hidden map-container">
+                <LMap style="height: 350px" :zoom=" 15 " :center=" [lat, lng] " @click=" handleMapClick ">
+                    <LTileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                        attribution="&copy; <a href=&quot;https://www.openstreetmap.org/&quot;>OpenStreetMap</a> contributors"
+                        layer-type="base" name="OpenStreetMap" />
 
-                <LMarker :lat-lng=" [lat, lng] ">
-                    <LIcon :icon-url=" iconUrl " :icon-size=" iconSize " />
-                </LMarker>
-            </LMap>
+                    <LMarker :lat-lng=" [lat, lng] ">
+                        <LIcon :icon-url=" iconUrl " :icon-size=" iconSize " />
+                    </LMarker>
+                </LMap>
 
-            <NuxtLink to="https://maps.app.goo.gl/ugMkAnKrojWvKVLx9" target="_blank"
-                class="px-3 py-2 text-center bg-pink-600 mt-3 text-pink-50">
-                Lihat Map</NuxtLink>
+                <NuxtLink to="https://maps.app.goo.gl/ugMkAnKrojWvKVLx9" target="_blank"
+                    class="px-3 py-2 text-center bg-pink-600 mt-3 text-pink-50">
+                    Lihat Map</NuxtLink>
+            </div>
         </div>
     </div>
 </template>

@@ -1,9 +1,7 @@
 <template>
-    <section id="story" class="w-full justify-center pt-6 bg-pink-100">
+    <section id="story" class="w-full justify-center bg-pink-100">
         <div class="w-full max-w-7xl flex flex-col m-auto p-auto">
-            <h1 class="text-center pb-10 font-bold text-4xl text-gray-800">
-                Our Story
-            </h1>
+            <HomePartialsSectionTitle label="Cerita Kami" />
             <div class="flex overflow-x-scroll hide-scroll-bar px-6 md:px-6">
                 <div class="flex flex-nowrap space-x-12">
                     <HomePartialsStoryItem :image=" image_story_1 " label="Story 1" />

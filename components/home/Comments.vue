@@ -1,8 +1,7 @@
 <template>
-    <section id="comments" class="pt-6 pb-32">
-        <h2 class="font-manrope text-5xl text-center font-bold text-gray-900 pb-10">Ucapan</h2>
+    <section id="comments" class="pt-6 pb-32 bg-pink-100">
+        <HomePartialsSectionTitle label="Ucapan" />
         <div class="max-w-2xl mx-auto w-[80%] p-6 bg-pink-200 rounded-lg shadow-lg">
-
             <!-- Comment Input Form -->
             <form @submit.prevent=" addComment " class="mb-6">
                 <div class="mb-4">
@@ -33,42 +32,57 @@
                         </div>
                         <h3 class="font-semibold text-gray-800">{{ comment.name }}</h3>
                     </div>
-                    <p class="text-gray-600">{{ comment.text }}</p>
+                    <p class="text-gray-600">{{ comment.comment }}</p>
                 </div>
             </div>
         </div>
     </section>
-
 </template>
 
-
 <script setup lang="ts">
-import { ref } from 'vue';
+import { onMounted, ref } from 'vue';
 
 interface Comment {
-    id: number
-    name: string
-    text: string
+    id: number;
+    name: string;
+    comment: string;
 }
 
-const comments = ref<Comment[]>([
-    { id: 1, name: 'Alice', text: 'Great post! Thanks for sharing.' },
-    { id: 2, name: 'Bob', text: 'I found this very helpful. Looking forward to more content like this.' }
-])
+const comments = ref<Comment[]>([]);
 
 const newComment = ref<{ name: string; text: string }>({
     name: '',
     text: ''
-})
+});
 
-const addComment = () => {
+// Fetch comments from the API
+const fetchComments = async () => {
+    const response = await fetch('/api/comments');
+    comments.value = await response.json();
+};
+
+// Add a new comment
+const addComment = async () => {
     if (newComment.value.name && newComment.value.text) {
-        comments.value.push({
-            id: comments.value.length + 1,
-            name: newComment.value.name,
-            text: newComment.value.text
-        })
-        newComment.value = { name: '', text: '' }
+        const response = await fetch('/api/comments', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                name: newComment.value.name,
+                comment: newComment.value.text
+            }),
+        });
+
+        if (response.ok) {
+            const createdComment = await response.json();
+            comments.value.push(createdComment); // Update local comments
+            newComment.value = { name: '', text: '' }; // Reset form
+        } else {
+            console.error('Failed to add comment');
+        }
     }
-}
+};
+
+// Fetch comments on component mount
+onMounted(fetchComments);
 </script>

@@ -29,6 +29,8 @@
 
 
 <script setup lang="ts">
+import { HomeApiTest } from '#build/components';
+
 useHead({
     title: "Nuxt 3 Minimal Starter",
     meta: [{ name: "description", content: "Nuxt 3 Minimal Starter" }]

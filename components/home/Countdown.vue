@@ -1,6 +1,6 @@
 <template>
-    <section id="countdown" class="pt-12 w-full bg-pink-100">
-        <h2 class="font-manrope text-5xl text-center font-bold text-gray-900">Countdown Acara</h2>
+    <section id="countdown" class="w-full bg-pink-100">
+        <HomePartialsSectionTitle label="Countdown Acara" />
 
         <div class="flex items-start justify-center h-24 gap-4 pt-12">
             <div class="timer w-16">

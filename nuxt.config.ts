@@ -10,7 +10,7 @@ export default defineNuxtConfig({
       autoprefixer: {},
     },
   },
-  modules: ["@nuxt/icon", "@nuxtjs/leaflet"],
+  modules: ["@nuxt/icon", "@nuxtjs/leaflet", "@prisma/nuxt"],
   router: {
     options: {
       scrollBehaviorType : "smooth",

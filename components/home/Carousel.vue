@@ -5,9 +5,9 @@
                 <div class="mask-overlay absolute z-10 inset-0 bg-pink-100 bg-opacity-60"></div>
                 <div
                     class="absolute z-20 w-full left-1/2 transform -translate-x-1/2 text-3xl md:text-6xl font-serif text-pink-600 mb-8 capitalize text-center lg:left-72 lg:translate-x-0">
-                    <div>Beni Mustiko Aji</div>
+                    <div>{{ config.groomName }}</div>
                     <div class="py-4">&</div>
-                    <div>Oktaviyanti</div>
+                    <div>{{ config.brideName }}</div>
                 </div>
             </div>
             <HomePartialsCarouselItem :image=" image_carousel_1 " />
@@ -22,13 +22,12 @@ import image_carousel_1 from '~/assets/images/carousel/carousel_1.jpeg';
 import image_carousel_2 from '~/assets/images/carousel/carousel_2.jpeg';
 import image_carousel_3 from '~/assets/images/carousel/carousel_3.jpeg';
 
+const config = inject('appConfig') || (() => { throw new Error('Config not provided'); })();
 const props = defineProps({
     isOpenInvitation: {
         type: Boolean
     }
 })
-
-
 
 const startCarousel = () => {
     const items = document.querySelectorAll<HTMLElement>('.carousel-item');

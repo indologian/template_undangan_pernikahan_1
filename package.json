@@ -7,16 +7,19 @@
     "dev": "nuxt dev --port=3000 --host=0.0.0.0",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "db:generate": "drizzle-kit generate"
   },
   "dependencies": {
     "@nuxtjs/leaflet": "^1.2.3",
-    "nuxt": "^3.13.0",
+    "nuxt": "^3.13.2",
     "vue": "latest",
-    "vue-router": "latest"
+    "vue-router": "^4.4.5"
   },
   "devDependencies": {
     "@nuxt/icon": "^1.5.1",
+    "@prisma/client": "^5.20.0",
+    "@prisma/nuxt": "^0.0.35",
     "autoprefixer": "^10.4.20",
     "concurrently": "^9.0.1",
     "postcss": "^8.4.47",
